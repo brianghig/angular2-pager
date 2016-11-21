@@ -86,13 +86,11 @@ gulp.task('build-js-umd', [ 'build-js' ], () => {
 	return doRollup({
 			entry: './dist/esm/index.js',
 			format: 'umd',
-			moduleName: 'angular2Sentio',
+			moduleName: 'angular2Pager',
 			sourceMap: true,
 			banner: bannerString,
 			globals: {
-				'@angular/core': 'ng.core',
-				'@asymmetrik/sentio': 'sentio',
-				'd3': 'd3'
+				'@angular/core': 'ng.core'
 			}
 		},
 		pkg.artifactName + '.umd'
